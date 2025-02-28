@@ -2,24 +2,19 @@
 <html>
     <head>
         <title>Ruega por nosotros</title>
-        <link rel="shortcut icon" href="lavanderlogo.png">
+        <link rel="shortcut icon" href="star.png">
         <meta charset="UTF-8"/>
-        <a href=muchasflores.html>jardín</a>
         <style>
-            body{
+            body {
                 background-color: #20190f;
                 white-space: pre; 
-                cursor: vertical-text;
+                cursor: url("lavanderlogo.png"), auto;
             }
             #autopoetica {
                 position: absolute;
                 color: #3a0a88;
-                /* background-color: #c2c2a3cb; */
                 text-shadow: 2px -2px 2px #a6a69e;
-                /* border-left: 20px dotted #806699; */
-                /* text-wrap: balance; */
                 width: 230px;
-                /* height: 500px; */
                 left: 400px;
                 top: 20px;
                 font-size: 30px;
@@ -29,11 +24,9 @@
             }
             #matcha {
                 position: absolute;
-                top: 30px;
+                top: 100px;
                 right: -200px;
                 width: 2000px;
-                /* height: 50px; */
-                opacity: 0.4;
                 border-radius: 40px 200px 150px 100px;
                 z-index: 1;
             }
@@ -47,7 +40,7 @@
                 border-radius: 100px 100px 100px 100px;
                 z-index: 4;
             }
-            #fish{
+            #fish {
                 position: absolute;
                 width: 20vw;
                 top: 9vh;
@@ -57,113 +50,139 @@
                 opacity: .8;
             }
 
-            #star{
+            #star {
                 position: absolute;
-                top: 50vh;
-                width: 10vw;
+                top: 30px;
+                left: 30px;
+                width: 5vw;
                 z-index: 5;
                 transition: height 3s ease-in;
             }
-            #star:hover{
-                height: 20vh;
-                width: 30vh; */
+            #star:hover {
+                height: 10vh;
+                width: 15vh;
             }
 
-            #musicvideo:link{
+            #musicvideo:link {
                 color: #724cab;
                 text-decoration: none;
             }
-            #musicvideo:visited{
+            #musicvideo:visited {
                 color: rgb(77, 109, 77);
                 text-decoration: none;
             }
-            #musicvideo:hover{
+            #musicvideo:hover {
                 color: aliceblue;
                 font-style: italic;
             }
-            #musicvideo:active{
+            #musicvideo:active {
                 color: rgb(255, 106, 0);
             }
 
-            .textbase{
-              color: red
+            .textbase {
+                color: red;
             }
 
-            .imgbase:hover{
+            .imgbase:hover {
                 border-radius: 40px;
                 border: 10px dotted #806699;
             }
 
-            #llanto{
+            #llanto {
                 color: #f9f9f9;
-                /* font-size: 100px; */
                 font-family: Georgia;
                 text-align: center;
                 z-index: 8;
             }
-        </style>
-    </head>
-    <body>
-        <html>
-    <head>
-        <style>
-        </style>
-    </head>
-    <body>
-        <a href="https://www.green-wood.com"><img id= "star" src="star.png"></a>
-        <img class="imgbase" id="aestheticflowers" src="aestheticflowers.gif">
-        <img id="matcha" src="matcha.png">
-        <video class="imgbase" loop controls id="fish" src="fish.MOV" type="video/MOV"></video>
-        <div class="textbase" id="autopoetica">
-        ¿Cuánto le costó? 
-        ¿Quién se la cogió? 
-        Si es una puta sudaca tercermundista
-        Nadie le parió
-        ¿De dónde apareció?
-        La mina se cree artista
-        Eh, eh, ¿cuánto le meten?
-        Eh, eh, ¿cuánto billete?
-        Eh, le baila por una birra
-        Bella, no llores más
-        Bajo el cielo de <a id= "musicvideo" href="https://www.youtube.com/watch?v=t9dtHxa-kL0"><div>Tenochtitlán</div></a>
-        Bella, no llores más
-        Se, eh
-        Se arrepentirán
-        Y la Virgen madre
-        La Morena
-        La va a bendecir
-        Eh, eh, ¿cuánto le meten?
-        Eh, eh, ¿cuánto billete?
-        Eh, le baila por una birra
-        Bella, no llores más
-        Bajo el cielo de <a id= "musicvideo" href="https://www.youtube.com/watch?v=t9dtHxa-kL0"><div>Tenochtitlán</div></a>
-        Bella, no llores más
-        Se, eh
-        Se arrepentirán
-        Dios te salve, María
-        Llena eres de gracia
-        El Señor es contigo
-        Bendita eres entre todas las mujeres
-        Y bendito es el fruto de tu vientre, Jesús
-        Santa María
-        Madre de Dios
-        <span id=llanto> Ruega por nosotros (y por todos ellos) </span>
-        Ahora y en la hora de nuestra muerte
-        Nuestra muerte
-        Nuestra muerte
-        Nue-nuestra muerte
-</div>
-    </body>
-</html>
-    </body>
-</html>
+            #path {
+                position: absolute;
+                z-index: 0;
+                opacity: 0.5;
+                width: 50vw;
+                height: 100vh;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #reloj {
+                color: #f9f9f9;
+                position: fixed;
+                top: 0;
+                right: auto;
+                font-size: 15px;
+                cursor: pointer;
+                z-index: 6;
+            }
 
-<script>
-    window.onload = function(){
-        var star = document.getElementById("autopoetica");
-      
-    }
-   </script>
+            .textbase {
+                display: inline-block;
+                transition: letter-spacing 0.3s ease;
+            }
+
+            .textbase:hover {
+                letter-spacing: 5px;
+            }
+            #bottomright {
+                position: fixed;
+                background-color:blue;
+                width: 30px;
+                height: 30px;
+                bottom: 30px;
+                right: 30px;
+                z-index: 10000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bottomright"></div>
+        <img src="path.jpg" id="path">
+        <img id="star" src="star.png">
+        <a href="muchasflores.html"><img class="imgbase" id="aestheticflowers" src="aestheticflowers.gif"></a>
+        <img id="matcha" src="matcha.png">
+        <a href="https://www.green-wood.com"><video class="imgbase" loop controls id="fish" src="fish.MOV" type="video/MOV"></video></a>
+        <div id="reloj">Click to change text</div>
+        <div id="autopoetica">
+            ¿Cuánto le costó? 
+            ¿Quién se la cogió? 
+            Si es una puta sudaca tercermundista
+            Nadie le parió
+            ¿De dónde apareció?
+            La mina se cree artista
+            Eh, eh, ¿cuánto le meten?
+            Eh, eh, ¿cuánto billete?
+            Eh, le baila por una birra
+            Bella, no llores más
+            Bajo el cielo de <a id="musicvideo" href="https://www.youtube.com/watch?v=t9dtHxa-kL0"><div>Tenochtitlán</div></a>
+            Bella, no llores más
+            Se, eh
+            Se arrepentirán
+            Y la Virgen madre
+            La Morena
+            La va a bendecir
+            Eh, eh, ¿cuánto le meten?
+            Eh, eh, ¿cuánto billete?
+            Eh, le baila por una birra
+            Bella, no llores más
+            Bajo el cielo de <a id="musicvideo" href="https://www.youtube.com/watch?v=t9dtHxa-kL0"><div>Tenochtitlán</div></a>
+            Bella, no llores más
+            Se, eh
+            Se arrepentirán
+            Dios te salve, María
+            Llena eres de gracia
+            El Señor es contigo
+            Bendita eres entre todas las mujeres
+            Y bendito es el fruto de tu vientre, Jesús
+            Santa María
+            Madre de Dios
+            <span class="textbase" id="llanto">Ruega por nosotros (y por todos ellos)</span>
+            Ahora y en la hora de nuestra <span class="textbase" id="muerte">muerte</span>
+            Nuestra <span class="textbase" id="muerte">muerte</span>
+            Nuestra <span class="textbase" id="muerte">muerte</span>
+            Nue-nuestra <span class="textbase" id="muerte">muerte</span>
+        </div>
+        <script src="jardin.js"></script>
+    </body>
+</html>
 
 <!-- lyrics of Tenochtitlán by Mon Laferte -->
  <!-- matcha img is my own

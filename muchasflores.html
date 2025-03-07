@@ -80,6 +80,21 @@
                 transition: transform 0.3s ease-in-out;
                 cursor: url('src/scissors.png'), auto;
             }
+            .bee {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        animation: flyAway 5s linear forwards;
+    }
+
+    @keyframes flyAway {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(100vw, -100vh);
+        }
+    }
     
         </style>
     </head>
@@ -98,10 +113,27 @@
        <img src="src/rose.png" id="rose">
        <img src="src/sunflower.png" id="sunflower">
        <img src="src/tulips.png" id="tulips"> 
+       <img src="bee.png" id="bee">
 
     </body>
     <html>
+        <script>
+            function showBees() {
+                // hide the tulips
+                document.getElementById('tulips').style.display = 'none';
+    
+                // create multiple bees
+                for (let i = 0; i < 5; i++) {
+                    const bee = document.createElement('img');
+                    bee.src = 'src/bee.png';
+                    bee.className = 'bee';
+                    document.body.appendChild(bee);
+                }
+            }
+        </script>
 
+
+    <!-- sources -->
 <!-- flowers text, page wikipedia: https://en.wikipedia.org/wiki/Flower -->
 <!-- Rose: https://purepng.com/photo/4069/rose
 Lavander: https://pngtree.com/free-flower-png/lavender

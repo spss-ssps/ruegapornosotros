@@ -1,7 +1,7 @@
 window.onload = function() {
     let wINdo = ["Blossom", "fern", "moss", "petal", "root", "meadow", "evergreen", "vine", "cedar", "pollen", "stem", "seedling", "thistle", "orchid", "bud", "canopy", "sprout", "cypress", "bamboo", "lotus", "wildflower", "ivy", "dandelion", "grove", "leaflet", "herb", "saffron", "sprig", "juniper", "blossom"];
     
-    document.getElementById("reloj").onclick = function() {
+    document.getElementById("llanto").onclick = function() {
         document.getElementById("llanto").innerHTML = wINdo[Math.floor(Math.random() * wINdo.length)];
     }
 

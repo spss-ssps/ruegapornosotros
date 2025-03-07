@@ -11,69 +11,116 @@
                 white-space: pre; 
                 cursor: url("src/lavanderlogo.png"), auto;
             }
+            /* for tablets */
+            @media (max-width: 900px) {
+                #autopoetica {
+                    width: 80%;
+                    font-size: 18px;
+                }
+                #matcha {
+                    width: 350px;
+                }
+                #aestheticflowers {
+                    width: 40vw;
+                    height: auto;
+                    left: 7vw;
+                }
+                #cherryblossom {
+                    width: 20vw;
+                    right: 10vw;
+                }
+            }
+
+            /* for mobile */
             @media (max-width: 600px) {
                 #bottomright {
                     display: inline;
                 }
                 body {
-                    background-color: #20190f;
-                    white-space: pre; 
-                    cursor: url("src/lavanderlogo.png"), auto;
+                    cursor: pointer;
+                }
+                #autopoetica {
+                    width: 90%;
+                    font-size: 16px;
+                    padding: 10px;
+                }
+                #matcha {
+                    width: 250px;
+                }
+                #aestheticflowers {
+                    width: 70vw;
+                    height: auto;
+                    left: 5vw;
+                    bottom: 20px;
+                }
+                #cherryblossom {
+                    width: 30vw;
+                    right: 5vw;
+                }
+                #star {
+                    width: 6vw;
                 }
             }
             #autopoetica {
-                position: absolute;
+                position: relative;
                 color: #3a0a88;
                 text-shadow: 2px -2px 2px #a6a69e;
-                width: 230px;
-                left: 400px;
-                top: 20px;
-                font-size: 30px;
+                width: 60%;
+                margin: 0 auto;
+                padding: 20px;
+                font-size: 20px;
                 font-family: Georgia;
                 text-align: center;
                 z-index: 2;
+                /* background-color: rgba(255, 255, 255, 0.074); */
+                border-radius: 10px;
             }
             #matcha {
-                position: absolute;
-                top: 100px;
-                right: -200px;
-                width: 2000px;
-                border-radius: 40px 200px 150px 100px;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40vw;
+                max-width: 500px;
+                /* border-radius: 40px 200px 150px 100px; */
                 z-index: 1;
+                opacity: 0.5;
             }
             #aestheticflowers {
-                position: absolute;
-                top: 400px;
-                right: 300px;
-                width: 1000px;
-                height: 400px;
+                position: fixed;
+                bottom: 25px;
+                left: 15%;
+                width: 25vw;
+                max-width: 500px;
+                height: auto;
                 opacity: 1;
                 border-radius: 100px 100px 100px 100px;
                 z-index: 4;
             }
-            #fish {
-                position: absolute;
-                width: 20vw;
-                top: 9vh;
-                right: 20vw;    
+            #cherryblossom {
+                position: fixed;
+                width: 15vw;
+                top: 50%;
+                right: 20vw;
+                transform: translateY(-50%);
                 border-radius: 30px 100px 10px 60px;
                 z-index: 5;
                 opacity: .8;
             }
 
             #star {
-                position: absolute;
-                top: 30px;
-                left: 30px;
-                width: 5vw;
+                position: fixed;
+                top: 15vh;
+                left: 52%;
+                transform: translateX(-50%);
+                width: 3vw;
                 z-index: 5;
-                transition: height 3s ease-in;
-            }
-            #star:hover {
-                height: 10vh;
-                width: 15vh;
+                transition: width 0.3s ease-in-out;
             }
 
+            #star:hover {
+                width: 6vw;
+            }
             #musicvideo:link {
                 color: #724cab;
                 text-decoration: none;
@@ -105,7 +152,7 @@
                 text-align: center;
                 z-index: 8;
             }
-            #path {
+            /* #path {
                 position: absolute;
                 z-index: 0;
                 opacity: 0.5;
@@ -113,7 +160,7 @@
                 height: 100vh;
                 top: 50px;
                 left: 50px;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); */
             }
             #reloj {
                 color: #f9f9f9;
@@ -147,13 +194,12 @@
     </head>
     <body>
         <div id="bottomright"></div>
-        <img src="src/path.jpg" id="path">
-        <img id="star" src="src/star.png">
+        <!-- <img src="src/path.jpg" id="path"> -->
+        <a href="https://vigorous-azimuth-27b.notion.site/itp-blog-8d65f6f43dea40eebcf4bfa7fb1e7521?pvs=4"><img id="star" src="src/star.png"></a>
         <a href="muchasflores.html"><img class="imgbase" id="aestheticflowers" src="src/aestheticflowers.gif"></a>
         <img id="matcha" src="src/matcha.png">
-        <a href="https://www.green-wood.com"><video class="imgbase" loop controls id="fish" src="src/fish.MOV" type="video/MOV"></video></a>
-        <div id="reloj">Click to change text</div>
-        <img src="bee.png" id="bee">
+        <a href="https://www.green-wood.com"><video class="imgbase" loop controls id="cherryblossom" src="src/cherryblossom.MOV" type="video/MOV"></video></a>
+        <!-- <div id="cambio">Click to change text</div> -->
         <div id="autopoetica">
             ¿Cuánto le costó? 
             ¿Quién se la cogió? 
@@ -165,7 +211,7 @@
             Eh, eh, ¿cuánto billete?
             Eh, le baila por una birra
             Bella, no llores más
-            Bajo el cielo de <a id="musicvideo" href="https://www.youtube.com/watch?v=t9dtHxa-kL0"><div>Tenochtitlán</div></a>
+            Bajo el cielo de <a id="musicvideo" href="https://www.youtube.com/watch?v=t9dtHxa-kL0"><span>Tenochtitlán</span></a>
             Bella, no llores más
             Se, eh
             Se arrepentirán
@@ -194,11 +240,10 @@
             Nue-nuestra <span class="textbase" id="muerte">muerte</span>
         </div>
         <script src="jardin.js"></script>
-    </body>
+        <!-- matcha img is my own -->
+ <!-- matcha img is my own -->
+ <!-- aestheticflowers img credit: https://www.pinterest.com/pin/499829258645118206/ -->
+ <!--web logo: https://www.flaticon.com/free-sticker/lavender_7194128 -->
+ <!-- star: https://static.wikia.nocookie.net/animalcrossing/images/9/96/NH-Star_fragment.png/revision/latest/smart/width/386/height/259?cb=20200326194818 -->
+</body>
 </html>
-
-<!-- lyrics of Tenochtitlán by Mon Laferte -->
- <!-- matcha img is my own
-  aestheticflowers img credit: https://www.pinterest.com/pin/499829258645118206/ -->
-  <!--web logo: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-sticker%2Flavender_7194128&psig=AOvVaw2aiiqRTF1pfQ54YlY94e4H&ust=1738904114073000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCWnuOgrosDFQAAAAAdAAAAABAJ-->
-  <!-- star: https://static.wikia.nocookie.net/animalcrossing/images/9/96/NH-Star_fragment.png/revision/latest/smart/width/386/height/259?cb=20200326194818 -->

@@ -4,6 +4,15 @@
     <head>
         <title>muchas flores</title>
         <meta charset="UTF-8"/>
+        <link rel="shortcut icon" href="src/rose.png">
+        <!-- <audio id="gardensound" src="src/gardensound.mp3" autoplay loop></audio> -->
+        <!-- <script>
+            // document.addEventListener('DOMContentLoaded', function() {
+            //     const gardensound = document.getElementById('gardensound');
+            //     gardensound.volume = 0.8;
+            //     gardensound.play();
+            // });
+        </script> -->
         <style>
             #flowerdescription{
                 position: absolute;
@@ -81,20 +90,19 @@
                 cursor: url('src/scissors.png'), auto;
             }
             .bee {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        animation: flyAway 5s linear forwards;
-    }
-
-    @keyframes flyAway {
-        0% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(100vw, -100vh);
-        }
-    }
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              animation: flyAway 3s linear forwards;
+             }
+            .bee:hover {
+                cursor: pointer;
+            }
+             
+             @keyframes flyAway {
+              0% { transform: translate(0, 0); }
+              100% { transform: translate(var(--fly-x), var(--fly-y)); }
+            }
     
         </style>
     </head>
@@ -107,29 +115,52 @@
         
         Flowers have long been appreciated for their beauty and pleasant scents, and also hold cultural significance as religious, ritual, or symbolic objects, or sources of medicine and food.
  </div>
-       <img src="src/garden.jpg" id="garden">
+       <img alt="picture of greenful garden with many bushes, and a stone path that leads to a wooden square"src="src/garden.jpg" id="garden">
        <a href="https://en.wikipedia.org/wiki/Lavandula"><img src="src/lavander.png" id="lavander"></a>    
-       <img src="src/lilies.png" id="lilies">
-       <img src="src/rose.png" id="rose">
-       <img src="src/sunflower.png" id="sunflower">
-       <img src="src/tulips.png" id="tulips"> 
-       <img src="bee.png" id="bee">
-
+       <img alt="two pink lilies" src="src/lilies.png" id="lilies">
+       <img alt="a pink rose with not stem" src="src/rose.png" id="rose">
+       <img alt="singular sunflower with two leaves, facing right" src="src/sunflower.png" id="sunflower">
+       <img alt="pink lilies bouquet" src="src/tulips.png" id="tulips" onclick="showBees()"> 
+       <audio id="beesound" src="src/beesound.mp3" preload="auto"></audio>
+    <!-- The bees are created dynamically by the showBees() function when tulips are clicked -->
     </body>
     <html>
         <script>
             function showBees() {
-                // hide the tulips
-                document.getElementById('tulips').style.display = 'none';
-    
-                // create multiple bees
-                for (let i = 0; i < 5; i++) {
+                // Get the position of the tulips
+                const tulips = document.getElementById('tulips');
+                const tulipsRect = tulips.getBoundingClientRect();
+                const startX = tulipsRect.left + tulipsRect.width / 2;
+                const startY = tulipsRect.top + tulipsRect.height / 2;
+                
+                // Create multiple bees
+                for (let i = 0; i < 3; i++) {
+
+                    // create a bee
                     const bee = document.createElement('img');
                     bee.src = 'src/bee.png';
                     bee.className = 'bee';
+                    
+                    //sound
+                    const beeSound = document.getElementById('beesound');
+        
+                    // play beesound
+                    beeSound.volume = 0.1;
+                    beeSound.currentTime = 0;
+                    beeSound.play();
+                    
+                    // bee pos
+                    bee.style.left = startX + 'px';
+                    bee.style.top = startY + 'px';
+                    
+                    // random fly direction
+                    bee.style.setProperty('--fly-x', Math.random() * 200 - 100 + 'vw');
+                    bee.style.setProperty('--fly-y', Math.random() * 200 - 100 + 'vh');
+                    
                     document.body.appendChild(bee);
                 }
             }
+       
         </script>
 
 
@@ -145,3 +176,5 @@ more flower: https://www.pinterest.com/pin/plants--580823683182705088/
 tulips: https://purepng.com/photo/18875/tulip
 garden scissors: https://pngtree.com/free-png-vectors/gardening-shears
 bee: https://pngmaker.io/tag/Honey-Bee -->
+<!-- garden sound: https://pixabay.com/sound-effects/search/garden/
+be sound:https://pixabay.com/sound-effects/search/bees/ -->

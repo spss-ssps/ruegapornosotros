@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>grave</title>
+        <link rel="shortcut icon" href="src/grave.png">
+        <style>
+            body {
+                background-color: #090704;
+            }
+            #grave {
+                position: fixed;
+                z-index: 0;
+                left: 50%;
+                top: 50%;
+                width: 8vw;
+                height: auto;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+ <img alt="blank stone grave" id="grave" src="src/grave.png">
+    </body>
+    <html>
+        <script>
+       let clickCount = 0;
+            const grave = document.getElementById('grave');
+
+            grave.addEventListener('click', () => {
+                clickCount++;
+                if (clickCount === 1) {
+                    alert('...');
+                } else if (clickCount === 2) {
+                    alert('stop');
+                } else if (clickCount === 3) {
+                    alert('...');
+                } else if (clickCount === 4) {
+                    alert('fine');
+                } else if (clickCount === 5) {
+                    window.location.href = 'https://www.green-wood.com';
+                }
+            });
+      
+        </script>
+    <!-- source
+    grave: https://www.vecteezy.com/png/9397874-grave-stone-clipart-design-illustration -->
+
